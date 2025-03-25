@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public float damage;
     public NavMeshAgent enemy;
     public Transform player;
     private WaveSpawner waveSpawner;
@@ -16,5 +17,13 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(player.position);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerStats>().TakeDamge(damage);
+        }
     }
 }
