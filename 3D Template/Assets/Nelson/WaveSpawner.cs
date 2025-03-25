@@ -9,6 +9,14 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] waves;
 
     private int currentWaveIndex = 0;
+    private void Start()
+    {
+        for (int i = 0; i < waves.Length; i++)
+        {
+            waves[i].enemiesLeft = waves[i].enemies.Length;
+        }
+    }
+
     private void Update()
     {
         countdown -= Time.deltaTime;
@@ -24,7 +32,8 @@ public class WaveSpawner : MonoBehaviour
     {
         for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
         {
-            Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
+            Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
+            enemy.transform.SetParent(spawnPoint.transform);
             yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
         }
     }
@@ -36,4 +45,5 @@ public class Wave
     public Enemy[] enemies;
     public float timeToNextEnemy;
     public float timeToNextWave;
+    [HideInInspector] public int enemiesLeft;
 }

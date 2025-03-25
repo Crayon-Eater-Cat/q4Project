@@ -5,6 +5,7 @@ public class EnemyFollow : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public Transform player;
+    private WaveSpawner waveSpawner;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
