@@ -9,10 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Delsin/Scenes/MenuMain.unity
+    path: Assets/Delsin/Scenes/Menus/MenuMain.unity
     guid: 22005126eedc7d94f8b467df9225473d
   - enabled: 1
     path: Assets/Delsin/Scenes/Game.unity
     guid: 058baad2b7865874db5819e2045e536f
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Menus/Quit.unity
+    guid: 0eb7ff29a1f57a94eb068530feee06c1
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Menus/QuitExtra.unity
+    guid: 874c6c9198d48a1499e404ac716fd9e6
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Credits/Credits.unity
+    guid: d7d1b97ef1aa8634891d78575e8d841e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
