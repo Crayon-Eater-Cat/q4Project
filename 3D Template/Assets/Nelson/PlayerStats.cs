@@ -20,4 +20,27 @@ public class PlayerStats : MonoBehaviour
         currentHealth -= amount;
         healthBar.SetSlider(currentHealth);
     }
+    public void Heal(float amount)
+    {
+        currentHealth += amount;
+        healthBar.SetSlider(currentHealth);
+    }
+    private void Update()
+    {
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log("You are Dead");
+        gameObject.SetActive(false);
+    }
 }
