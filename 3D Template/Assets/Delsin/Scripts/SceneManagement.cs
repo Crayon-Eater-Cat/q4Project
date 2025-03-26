@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
     int count = 0;
+    public GameObject[] Images;
     public void Play()
     {
         SceneManager.LoadScene("Game");
@@ -43,33 +44,65 @@ public class SceneManagement : MonoBehaviour
     }
     public void previous()
     {
-        count--;
+        Images[count].gameObject.SetActive(false);
+        count -= 1;
+        if (count == -1)
+        {
+            count = Images.Length - 1;
+            print("Going back");
+        }
+        print("Previous one:" + count);
+        //CreditScreen();
+        Images[count].gameObject.SetActive(true);
     }
     public void next()
     {
-        count++;
+        Images[count].gameObject.SetActive(false);
+        count += 1;
+        if (count == Images.Length)
+        {
+            count = 0;
+            print("Going back");
+        }
+        print("Next one:" + count);
+        //CreditScreen();
+        Images[count].gameObject.SetActive(true);
     }
-    public void CreditScreen()
+    public GameObject activeGameObject;
+
+    public void ActiveObject(GameObject GO)
     {
-        if (count == 0)
+        if (GO.activeSelf!= true)
         {
-            count = 1;
-        }
-        if (count == 1)
-        {
-            SceneManager.LoadScene("Abigail");
-        }
-        if (count == 2)
-        {
-            SceneManager.LoadScene("Delsin");
-        }
-        if (count == 3)
-        {
-            SceneManager.LoadScene("Thomas");
-        }
-        if (count == 4)
-        {
-            count = 1;
+            GO.SetActive(true);
         }
     }
+    //public void CreditScreen()
+    //{
+    //    if (count <= -1)
+    //    {
+    //        count = 3;
+    //    }
+    //    if (count == 0)
+    //    {
+    //        SceneManager.LoadScene("Credits");
+    //    }
+    //    if (count == 1)
+    //    {
+    //        SceneManager.LoadScene("Abigail");
+    //    }
+    //    if (count == 2)
+    //    {
+    //        SceneManager.LoadScene("Delsin");
+    //    }
+    //    if (count == 3)
+    //    {
+    //        SceneManager.LoadScene("Thomas");
+    //    }
+    //    if (count == 4)
+    //    {
+    //        count = 0;
+    //        print("Going back");
+    //    }
+    //}
 }
