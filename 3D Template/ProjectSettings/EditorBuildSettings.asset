@@ -23,5 +23,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Delsin/Scenes/Credits/Credits.unity
     guid: d7d1b97ef1aa8634891d78575e8d841e
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Credits/Abigail.unity
+    guid: 8592a2700fb083d4f9bd56aad0bd6f8b
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Credits/Delsin.unity
+    guid: 017ef627cdd34cf4f8a7db7ae2f988b3
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Credits/Thomas.unity
+    guid: b09aedcda4315054c8ba43ef59a3c7ec
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Menus/Settings.unity
+    guid: 6040c4e23b9b6aa4c8285a3e8d44db10
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Menus/Tutorial.unity
+    guid: cd758fd23579472478e14b64ae0cb3fb
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
