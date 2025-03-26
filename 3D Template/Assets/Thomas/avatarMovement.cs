@@ -13,7 +13,17 @@ public class avatarMovement : MonoBehaviour
     Transform campivot;
     bool canjump;
     public bool mousecontrolled;
+
+    public KeyCode attackkey;
+
     bool attack;
+    float timer;
+
+    float x;
+    float y;
+
+    float x2;
+    float y2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,10 +36,12 @@ public class avatarMovement : MonoBehaviour
     void Update()
     {
         //get axis:
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-        float x2;
-        float y2;
+        if (!attack)
+        {
+
+            x = Input.GetAxisRaw("Horizontal");
+            y = Input.GetAxisRaw("Vertical");
+        }
         if (!mousecontrolled)
         {
 
@@ -84,17 +96,31 @@ public class avatarMovement : MonoBehaviour
         {
             angle = campivot.rotation.eulerAngles.y + 135;
         }
+
+        //attackbox:
+        transform.GetChild(3).GetComponent<BoxCollider>().enabled=attack;
+
+        //checking if you can jump:
+        canjump = Physics.BoxCast(transform.position, new Vector3(0, 1, 0), -transform.up, Quaternion.Euler(Vector3.zero), 1);
+        anim.SetBool("jumping", !canjump);
         //combat:
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(attackkey)&&!attack&&canjump)
         {
-            x = 0;
-            y = 0;
+            attack = true;
+            timer = 200;
             anim.SetTrigger("attack");
         }
-        //checking if you can jump:
-        canjump = Physics.BoxCast(transform.position, new Vector3(0, 0.1f, 0), -transform.up,Quaternion.Euler(Vector3.zero),1);
-        anim.SetBool("jumping",!canjump);
-        Debug.Log(canjump);
+        if (attack)
+        {
+            timer -= 1;
+            x = 0;
+            y = 0;
+        }
+        if (timer<=0)
+        {
+            attack = false;
+        }
+        //________
         //jump:
         if (Input.GetKeyDown(KeyCode.Space)&&canjump)
         {
