@@ -1,15 +1,19 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
+    private ArmorSystem armorSystem;
     
     private float currentHealth;
-
+    public TextMeshProUGUI healthAmountText;
     public HealthBar healthBar;
     private void Start()
     {
+        armorSystem = GetComponent<ArmorSystem>();
+
         currentHealth = maxHealth;
 
         healthBar.SetSliderMax(maxHealth);
@@ -17,6 +21,10 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamge(float amount)
     {
+        float finalDamage = armorSystem.CalculateDamage(amount);
+
+        DecreaseHealth(finalDamage);
+
         currentHealth -= amount;
         healthBar.SetSlider(currentHealth);
     }
@@ -27,6 +35,8 @@ public class PlayerStats : MonoBehaviour
     }
     private void Update()
     {
+        healthAmountText.text = currentHealth + " / " + maxHealth;
+
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
@@ -37,7 +47,10 @@ public class PlayerStats : MonoBehaviour
             Die();
         }
     }
-
+    public void DecreaseHealth(float amount)
+    {
+        currentHealth -= amount;
+    }
     private void Die()
     {
         Debug.Log("You are Dead");
