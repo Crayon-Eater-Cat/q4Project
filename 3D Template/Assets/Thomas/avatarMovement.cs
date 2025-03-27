@@ -107,8 +107,7 @@ public class avatarMovement : MonoBehaviour
         if (Input.GetKeyDown(attackkey)&&!attack&&canjump)
         {
             attack = true;
-            timer = 200;
-            anim.SetTrigger("attack");
+            timer = 150;
         }
         if (attack)
         {
@@ -120,6 +119,7 @@ public class avatarMovement : MonoBehaviour
         {
             attack = false;
         }
+        anim.SetBool("attackbool", attack);
         //________
         //jump:
         if (Input.GetKeyDown(KeyCode.Space)&&canjump)
