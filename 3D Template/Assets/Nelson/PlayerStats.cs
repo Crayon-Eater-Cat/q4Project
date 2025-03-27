@@ -4,10 +4,10 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float maxHealth;
+    public float maxHealth;
     private ArmorSystem armorSystem;
     
-    private float currentHealth;
+    public float currentHealth;
     public TextMeshProUGUI healthAmountText;
     public HealthBar healthBar;
     private void Start()
