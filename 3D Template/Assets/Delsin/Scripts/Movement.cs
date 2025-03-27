@@ -123,7 +123,7 @@ public class Player1 : MonoBehaviour
     void MovePlayer()
     {
 
-        Vector3 movement = (transform.right * moveHorizontal + transform.forward * moveForward).normalized;
+        Vector3 movement = (transform.right * -moveHorizontal + transform.forward * moveForward).normalized;
         Vector3 targetVelocity = movement * MoveSpeed;
 
         // Apply movement to the Rigidbody
