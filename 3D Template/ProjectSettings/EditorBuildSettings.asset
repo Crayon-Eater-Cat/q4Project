@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Nelson/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Delsin/Scenes/Menus/MenuMain.unity
@@ -38,5 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Delsin/Scenes/Menus/Tutorial.unity
     guid: cd758fd23579472478e14b64ae0cb3fb
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 44256e8a2e7bc674c9cceab2f043a30c,
+      type: 3}
   m_UseUCBPForAssetBundles: 0

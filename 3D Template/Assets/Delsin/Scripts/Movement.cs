@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 /*
@@ -6,6 +8,16 @@ using UnityEngine;
 
 public class Player1 : MonoBehaviour
 {
+    public void setTimer(float time, Action action)
+    {
+        StartCoroutine(timerFunction(time, action));
+
+    }
+    private IEnumerator timerFunction(float time, Action action)
+    {
+        yield return new WaitForSeconds(time);
+        action.Invoke();
+    }
     // Keybinds
     public KeyCode jump, forward, backward, left, right, sprint;
     
