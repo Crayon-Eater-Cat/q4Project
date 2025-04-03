@@ -24,12 +24,24 @@ public class avatarMovement : MonoBehaviour
 
     float x2;
     float y2;
+
+    int life;
+
+    public HealthBar hb;
+
+    public string enemyattacktag;
+
+    bool invincible;
+
+    float invintimer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         campivot = transform.GetChild(2);
+        hb.SetSliderMax(100);
     }
 
     // Update is called once per frame
@@ -133,5 +145,24 @@ public class avatarMovement : MonoBehaviour
 
         Vector3 movementvel = -transform.right * Mathf.Abs(y) * speed+ -transform.right * Mathf.Abs(x) * speed;
         rb.linearVelocity = new Vector3(movementvel[0],rb.linearVelocity.y,movementvel[2]);
+        if (invintimer>0)
+        {
+            invintimer -= 1;
+        }
+        if (invintimer<=0)
+        {
+            invincible = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag==enemyattacktag&&!invincible)
+        {
+            invincible = true;
+            life -= 3;
+            timer = 20;
+            hb.SetSlider(life);
+        }
     }
 }
