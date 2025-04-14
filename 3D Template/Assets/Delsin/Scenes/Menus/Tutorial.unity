@@ -660,7 +660,7 @@ MonoBehaviour:
 
 
     [Forward],
-    [leftStrafe], [Backwards], and [rightStrafe] will move the player in the direction
+    [Left Strafe], [Backwards], and [Right Strafe] will move the player in the direction
     of the key
 
 
@@ -668,8 +668,9 @@ MonoBehaviour:
     again when airborn will activate a double-jump which resets when coming in contact
     with ground or flooring'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c743222c1128a04cb83f020ea87cd36, type: 2}
+  m_sharedMaterial: {fileID: -2379848944786436063, guid: 8c743222c1128a04cb83f020ea87cd36,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
