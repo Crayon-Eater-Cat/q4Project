@@ -31,11 +31,48 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
+<<<<<<< HEAD
       name: hit
       takeName: hit
       internalID: 2459078804267041145
       firstFrame: 0
       lastFrame: 7
+=======
+      name: idle.002
+      takeName: idle.002
+      internalID: -8462699443042018354
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cube|Action
+      takeName: Cube|Action
+      internalID: -8051102449201487124
+      firstFrame: 0
+      lastFrame: 0
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -64,7 +101,11 @@ ModelImporter:
       takeName: Cube|attack
       internalID: -6747280277425040062
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 6
+=======
+      lastFrame: 10
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -93,7 +134,11 @@ ModelImporter:
       takeName: Cube|death
       internalID: -9140130971773860617
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 4
+=======
+      lastFrame: 8
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -118,11 +163,135 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+<<<<<<< HEAD
       name: samurai|Action.001
       takeName: samurai|Action.001
       internalID: 262129197205212521
       firstFrame: 0
       lastFrame: 6
+=======
+      name: Cube|hit
+      takeName: Cube|hit
+      internalID: 8800268242284280442
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cube|idle
+      takeName: Cube|idle
+      internalID: 8558458877805361986
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cube|jump
+      takeName: Cube|jump
+      internalID: 4893631700732498978
+      firstFrame: 0
+      lastFrame: 8
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cube|running
+      takeName: Cube|running
+      internalID: -5304271381749117756
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: samurai|Action
+      takeName: samurai|Action
+      internalID: -6444965636739541802
+      firstFrame: 0
+      lastFrame: 0
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -151,7 +320,11 @@ ModelImporter:
       takeName: samurai|attack
       internalID: 5816592196528952662
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 6
+=======
+      lastFrame: 10
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -383,7 +556,11 @@ ModelImporter:
       takeName: samurai|death
       internalID: 1235980224580582029
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 4
+=======
+      lastFrame: 8
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -412,7 +589,11 @@ ModelImporter:
       takeName: samurai|hit
       internalID: -4878144499727457729
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 7
+=======
+      lastFrame: 5
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -499,7 +680,11 @@ ModelImporter:
       takeName: samurai|idle
       internalID: 8969402599321292100
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 11
+=======
+      lastFrame: 0
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -673,7 +858,11 @@ ModelImporter:
       takeName: samurai|jump
       internalID: 8228420523850758672
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 11
+=======
+      lastFrame: 8
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -702,7 +891,11 @@ ModelImporter:
       takeName: samurai|running
       internalID: 607315504217941497
       firstFrame: 0
+<<<<<<< HEAD
       lastFrame: 11
+=======
+      lastFrame: 10
+>>>>>>> 570bf2668e5d02e88bad9985abd3388a02d894d5
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

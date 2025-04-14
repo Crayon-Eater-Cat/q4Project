@@ -13,6 +13,7 @@ public class avatarMovement : MonoBehaviour
     Transform campivot;
     bool canjump;
     public bool mousecontrolled;
+    public float invincibilityDuration;
 
     public KeyCode attackkey;
 
@@ -161,8 +162,13 @@ public class avatarMovement : MonoBehaviour
         {
             invincible = true;
             life -= 3;
-            timer = 20;
+            timer = invincibilityDuration;
             hb.SetSlider(life);
+            anim.SetTrigger("hit");
+            if (life<=0)
+            {
+                anim.SetTrigger("death");
+            }
         }
     }
 }
