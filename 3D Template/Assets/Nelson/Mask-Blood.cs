@@ -10,4 +10,9 @@ public class HealthBuff : TailsmanEffects
     {
         target.GetComponent<PlayerStats>().maxHealth += amount;  
     }
+
+    public void DamageOverTime(int damageAmount, int damageTime)
+    {
+        //StartCoroutine(DamageOverTimeCoroutine(damageAmount, damageTime));
+    }
 }
