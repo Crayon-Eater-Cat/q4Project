@@ -823,6 +823,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2083111864}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8da21bbd86cfd3b45a1b4b1b954c6353,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2083111865}
   m_SourcePrefab: {fileID: 100100000, guid: 8da21bbd86cfd3b45a1b4b1b954c6353, type: 3}
 --- !u!1 &1067597108
 GameObject:
@@ -2011,8 +2015,9 @@ GameObject:
   - component: {fileID: 1964602100}
   - component: {fileID: 1964602099}
   - component: {fileID: 1964602103}
+  - component: {fileID: 1964602104}
   m_Layer: 0
-  m_Name: Mask1
+  m_Name: MaskBlood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2120,6 +2125,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 10
+--- !u!114 &1964602104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964602097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd35b1f2c891737488aa5f005a718b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 0}
 --- !u!1001 &2015113169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2393,6 +2411,19 @@ MonoBehaviour:
   currentHealth: 100
   healthAmountText: {fileID: 525613165}
   healthBar: {fileID: 1723714897}
+--- !u!114 &2083111865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083111855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd35b1f2c891737488aa5f005a718b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 0}
 --- !u!1001 &4446965765733518896
 PrefabInstance:
   m_ObjectHideFlags: 0
