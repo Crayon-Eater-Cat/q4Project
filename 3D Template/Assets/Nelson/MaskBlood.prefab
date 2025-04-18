@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7118327664047829540}
   - component: {fileID: 2551680226470468615}
   - component: {fileID: -3936825953921529495}
+  - component: {fileID: 1873711818545532907}
   m_Layer: 0
   m_Name: MaskBlood
   m_TagString: Untagged
@@ -133,6 +134,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bbc2fe0817f3f4479c833180a3a06ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 652f8c206e2d9b748a03d00294dd9d0a, type: 2}
+--- !u!114 &1873711818545532907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3069114263202336410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daaed59c2fe16514188021d7ad3f416c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: 652f8c206e2d9b748a03d00294dd9d0a, type: 2}

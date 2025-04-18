@@ -12,4 +12,14 @@ public class InventoryManger : MonoBehaviour
     {
         Instance = this;
     }
+
+    public void Add(InventoryItem item)
+    {
+        Items.Add(item);
+    }
+
+    public void Remove(InventoryItem item)
+    {
+        Items.Remove(item);
+    }
 }

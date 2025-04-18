@@ -1,8 +1,4 @@
-using JetBrains.Annotations;
-using UnityEditor.UI;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 public class ResetPos : MonoBehaviour
 {
     public KeyCode reset;
