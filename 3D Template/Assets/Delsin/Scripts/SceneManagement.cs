@@ -8,7 +8,7 @@ public class SceneManagement : MonoBehaviour
     public GameObject[] Images;
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Nelson");
     }
     public void Settings()
     {
