@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77db6a73661228c4998e7c15eab8b9e5, type: 3}
   m_Name: MaskBlood
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  value: 0
+  id: 1
+  itemName: MaskBlood
+  value: 10
   icon: {fileID: 0}
