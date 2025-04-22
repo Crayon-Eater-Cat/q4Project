@@ -1,9 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class MaskBlood : MonoBehaviour
+public class MaskBlood : Masks
 {
     public float duration;
+
+    public override void ApplyAffects()
+    {
+        this.ApplyAffects();
+    }
 
     public void DamageOverTime(int damageAmount, int damageTime)
     {
