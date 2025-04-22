@@ -36,6 +36,8 @@ public class avatarMovement : MonoBehaviour
 
     float invintimer;
 
+    public SphereCollider sc;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,6 +50,8 @@ public class avatarMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        sc.enabled = attack;
         //get axis:
         if (!attack)
         {
@@ -120,7 +124,7 @@ public class avatarMovement : MonoBehaviour
         if (Input.GetKeyDown(attackkey)&&!attack&&canjump)
         {
             attack = true;
-            timer = 150;
+            timer = 30;
         }
         if (attack)
         {
