@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class MaskBlood : Masks
@@ -8,6 +9,7 @@ public class MaskBlood : Masks
     public override void ApplyAffects()
     {
         this.ApplyAffects();
+        Debug.Log("Bleh");
     }
 
     public void DamageOverTime(int damageAmount, int damageTime)

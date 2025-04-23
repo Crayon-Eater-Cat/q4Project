@@ -6,7 +6,7 @@ public class Masks : MonoBehaviour
     
     public virtual void ApplyAffects()
     {
-        Debug.Log("Communists & Fascist are cultrue vultures");
+        Debug.Log("Eto");
     }
 
     private void Start()
