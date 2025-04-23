@@ -1,5 +1,6 @@
 using UnityEngine;
-[CreateAssetMenu(fileName ="New Item",menuName ="Item/Create New Item")]
+using UnityEngine.Events;
+[CreateAssetMenu(fileName = "New Item", menuName = "Item/Create New Item")]
 
 public class InventoryItem : ScriptableObject
 {
@@ -7,4 +8,12 @@ public class InventoryItem : ScriptableObject
     public string itemName;
     public int value;
     public Sprite icon;
+    public UnityEvent effect;
+
+    public void StartupMaskBlood()
+    {
+        FindFirstObjectByType<MaskBlood>().ApplyAffects();
+    }
+
+
 }

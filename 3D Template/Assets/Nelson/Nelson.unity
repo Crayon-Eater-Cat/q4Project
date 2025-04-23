@@ -1145,6 +1145,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2083111865}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8da21bbd86cfd3b45a1b4b1b954c6353,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2083111866}
   m_SourcePrefab: {fileID: 100100000, guid: 8da21bbd86cfd3b45a1b4b1b954c6353, type: 3}
 --- !u!1 &843539122
 GameObject:
@@ -3314,6 +3318,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 0}
+--- !u!114 &2083111866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083111855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e148ff845f9732d4fbba00622cccf7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaskName: 
+  duration: 0
 --- !u!1001 &4446965765733518896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3390,6 +3408,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2551680226470468615, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: MaskName
+      value: Blood-Mask
+      objectReference: {fileID: 0}
     - target: {fileID: 3069114263202336410, guid: 9086f254fd8353342bc9f165a755d08e,
         type: 3}
       propertyPath: m_Name

@@ -8,8 +8,9 @@ public class MaskBlood : Masks
 
     public override void ApplyAffects()
     {
-        this.ApplyAffects();
+        base.ApplyAffects();
         Debug.Log("Bleh");
+        
     }
 
     public void DamageOverTime(int damageAmount, int damageTime)

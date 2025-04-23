@@ -43,6 +43,8 @@ public class InventoryManger : MonoBehaviour
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
+
+            obj.GetComponent<Button>().onClick.AddListener(item.effect.Invoke);
         }
 
         SetInventoryItems();
