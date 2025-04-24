@@ -39,7 +39,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MenuMusic
+  m_Name: MainMixer
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -48,7 +48,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 734d44ab4c466bc4b97f3d457faf85fe
+    name: musicGameVolume
+  - guid: 0feed5a6c3db1fe4696642d8fd135620
+    name: masterVolume
+  - guid: adcecc1c3a568ca43bec2338d910796a
+    name: musicMenuVolume
   m_AudioMixerGroupViews:
   - guids:
     - 265de1a589d645a4eb79843a8265dcb1
