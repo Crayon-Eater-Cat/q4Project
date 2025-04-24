@@ -26,17 +26,19 @@ public class avatarMovement : MonoBehaviour
     float x2;
     float y2;
 
-    int life;
-
     public HealthBar hb;
 
     public string enemyattacktag;
 
-    bool invincible;
+    bool invincible=false;
 
     float invintimer;
 
     public SphereCollider sc;
+
+    bool dead=false;
+
+    PlayerStats ps;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,31 +46,43 @@ public class avatarMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         campivot = transform.GetChild(2);
-        hb.SetSliderMax(100);
+
+        ps = GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(ps.GetHealth());
 
         sc.enabled = attack;
         //get axis:
-        if (!attack)
+        if (!dead)
         {
+            if (!attack)
+            {
 
-            x = Input.GetAxisRaw("Horizontal");
-            y = Input.GetAxisRaw("Vertical");
-        }
-        if (!mousecontrolled)
-        {
+                x = Input.GetAxisRaw("Horizontal");
+                y = Input.GetAxisRaw("Vertical");
+            }
+            if (!mousecontrolled)
+            {
 
-            x2 = Input.GetAxis("Horizontal2");
-            y2 = Input.GetAxis("Vertical2");
+                x2 = Input.GetAxis("Horizontal2");
+                y2 = Input.GetAxis("Vertical2");
+            }
+            else
+            {
+                x2 = Input.GetAxis("Mouse X");
+                y2 = Input.GetAxis("Mouse Y");
+            }
         }
         else
         {
-            x2 = Input.GetAxis("Mouse X");
-            y2 = Input.GetAxis("Mouse Y");
+            x = 0;
+            y = 0;
+            x2 = 0;
+            y2 = 0;
         }
 
         //animation:
@@ -121,7 +135,7 @@ public class avatarMovement : MonoBehaviour
         canjump = Physics.BoxCast(transform.position, new Vector3(0, 1, 0), -transform.up, Quaternion.Euler(Vector3.zero), 1);
         anim.SetBool("jumping", !canjump);
         //combat:
-        if (Input.GetKeyDown(attackkey)&&!attack&&canjump)
+        if (Input.GetKeyDown(attackkey)&&!attack&&canjump&&!dead)
         {
             attack = true;
             timer = 30;
@@ -162,16 +176,16 @@ public class avatarMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag==enemyattacktag&&!invincible)
+        if (other.gameObject.tag==enemyattacktag&&!invincible)
         {
             invincible = true;
-            life -= 3;
-            timer = invincibilityDuration;
-            hb.SetSlider(life);
+            ps.DecreaseHealth(3);
+            invintimer = invincibilityDuration;
             anim.SetTrigger("hit");
-            if (life<=0)
+            if (ps.GetHealth()<=0)
             {
-                anim.SetTrigger("death");
+                anim.SetTrigger("dead");
+                dead = true;
             }
         }
     }
