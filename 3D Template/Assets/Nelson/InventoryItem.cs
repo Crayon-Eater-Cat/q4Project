@@ -15,5 +15,23 @@ public class InventoryItem : ScriptableObject
         FindFirstObjectByType<MaskBlood>().ApplyAffects();
     }
 
+    public void StartupMaskBounding()
+    {
+        
+    }
 
+    public void StartupMaskPenalty()
+    {
+
+    }
+
+    public void StartupMaskSignificance()
+    {
+
+    }
+
+    public void StartupMaskSwiftness()
+    {
+
+    }
 }
