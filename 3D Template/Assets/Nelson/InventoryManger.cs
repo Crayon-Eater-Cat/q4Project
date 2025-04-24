@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class InventoryManger : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class InventoryManger : MonoBehaviour
 
     public Transform ItemContent;
     public GameObject InventoryItem;
+    
 
     public InventoryItemController[] InventoryItems;
     private void Awake()
@@ -22,12 +24,6 @@ public class InventoryManger : MonoBehaviour
     {
         Items.Add(item);
     }
-
-    public void Remove(InventoryItem item)
-    {
-        Items.Remove(item);
-    }
-
     public void ListItems()
     {
         foreach (Transform item in ItemContent)
