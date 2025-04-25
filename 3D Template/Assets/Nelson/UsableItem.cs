@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class UsableItem : MonoBehaviour
+[CreateAssetMenu]
+public class UsableItem : Masks
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public virtual void Use(PlayerStats playerstats, avatarMovement playermovement)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
