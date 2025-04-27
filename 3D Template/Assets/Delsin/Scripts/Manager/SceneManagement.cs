@@ -1,9 +1,35 @@
+using System.Collections;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+    public Animator SceneTransition;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(SceneTransition.transform.parent.gameObject);
+    }
+
+    public void ChangeScenes(string SceneName)
+    {
+        StartCoroutine(loadASync(SceneName));
+    }
+
+    IEnumerator loadASync(string SceneName)
+    {
+        var operation = SceneManager.LoadSceneAsync(SceneName);
+        operation.allowSceneActivation = false;
+
+        SceneTransition.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        SceneTransition.SetTrigger("Finished");
+        
+        operation.allowSceneActivation = true;
+    }
     int count = 0;
     public GameObject[] Images;
     public void Play()
