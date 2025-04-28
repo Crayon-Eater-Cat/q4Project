@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position,rayorigin.forward,out hit,detectiondist))
         {
-            if (hit.collider.gameObject.tag=="Player")
+            if (hit.collider.gameObject.tag=="Player"&&health>0)
             {
                 if (Vector3.Distance(transform.position,player.position)>stoppingdist)
                 {
@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour
             {
                 anim.SetTrigger("attack");
                 attacktimer = 10;
-                attacking = 5;
+                attacking = 2;
             }
         }
         if (attacktimer>0 )
@@ -122,12 +122,15 @@ public class Enemy : MonoBehaviour
                 anim.SetBool("hit", true);
                 health -= 5;
                 ishit = 50;
-                mode = "death";
-                Invoke("SelfDestruct", 2f);
+                if (health<=0)
+                {
+                    mode = "death";
+                    Invoke("SelfDestruct", 7f);
+                }
             }
             else
             {
-                anim.SetTrigger("death");
+                anim.SetBool("death",true);
             }  
         }
     }

@@ -170,13 +170,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: death
-    m_Type: 9
+  - m_Name: hit
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: hit
+  - m_Name: death
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -319,16 +319,16 @@ AnimatorStateMachine:
     m_Position: {x: -50, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4916607632104157267}
-    m_Position: {x: 120, y: 440, z: 0}
+    m_Position: {x: 140, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4482105204568416224}
-    m_Position: {x: -420, y: 450, z: 0}
+    m_Position: {x: -500, y: 670, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3092571792568083909}
-    m_Position: {x: -180, y: 540, z: 0}
+    m_Position: {x: -100, y: 550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -37489935995005227}
-    m_Position: {x: -30, y: 790, z: 0}
+    m_Position: {x: 170, y: 740, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
