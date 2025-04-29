@@ -4,7 +4,8 @@ public class avatarMovement : MonoBehaviour
 {
     Rigidbody rb;
     public float jumpforce;
-    public float speed;
+    public float setspeed;
+    float speed;
     public float camspeed;
     float angle;
     float camangle;
@@ -40,9 +41,12 @@ public class avatarMovement : MonoBehaviour
 
     PlayerStats ps;
 
+    string mode;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        mode = "standard";
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         campivot = transform.GetChild(2);
@@ -150,6 +154,14 @@ public class avatarMovement : MonoBehaviour
         {
             attack = false;
         }
+        if (mode == "standard")
+        {
+            speed = setspeed;
+        }
+        else if (mode=="swift")
+        {
+            speed = setspeed * 2;
+        }
         anim.SetBool("attackbool", attack);
         //________
         //jump:
@@ -179,7 +191,15 @@ public class avatarMovement : MonoBehaviour
         if (other.gameObject.tag==enemyattacktag&&!invincible)
         {
             invincible = true;
-            ps.DecreaseHealth(3);
+            if (mode=="standard")
+            {
+                ps.DecreaseHealth(3);
+            }
+            else if (mode=="swift")
+            {
+                ps.DecreaseHealth(7);
+            }
+                
             invintimer = invincibilityDuration;
             anim.SetTrigger("hit");
             if (ps.GetHealth()<=0)
