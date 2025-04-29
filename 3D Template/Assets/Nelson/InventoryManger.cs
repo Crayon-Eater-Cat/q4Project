@@ -35,12 +35,12 @@ public class InventoryManger : MonoBehaviour
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("ItemTcon").GetComponent<Image>();
+            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
 
-            obj.GetComponent<Button>().onClick.AddListener(item.effect.Invoke);
+            obj.GetComponent<Button>().onClick.AddListener(() => item.effect.Invoke(FindFirstObjectByType<PlayerStats>(), FindFirstObjectByType<avatarMovement>()));
         }
 
         SetInventoryItems();

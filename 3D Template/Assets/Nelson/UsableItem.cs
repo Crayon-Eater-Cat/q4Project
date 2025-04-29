@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
-[CreateAssetMenu]
 public class UsableItem : Masks
 {
     public bool IsUseable;
@@ -13,7 +12,7 @@ public class UsableItem : Masks
     {
         foreach (UseableItemEffect effect in Effects)
         {
-            effect.ExecuteEffect(this, playerstats, playermovement);
+            effect.ExecuteEffect(FindFirstObjectByType<PlayerStats>(), FindFirstObjectByType<avatarMovement>());
         }
     }
 }

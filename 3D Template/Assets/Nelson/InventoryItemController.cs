@@ -9,8 +9,8 @@ public class InventoryItemController : MonoBehaviour
         item = newItem;
     }
 
-    public void InventoryRightClick(UsableItem item)
+    public void InventoryRightClick(InventoryItem item)
     {
-        item.Use(FindFirstObjectByType<PlayerStats>(), FindFirstObjectByType<avatarMovement>());
+        item.effect.Invoke(FindFirstObjectByType<PlayerStats>(), FindFirstObjectByType<avatarMovement>());
     }
 }

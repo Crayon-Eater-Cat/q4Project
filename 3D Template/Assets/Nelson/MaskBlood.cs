@@ -2,29 +2,22 @@ using System.Collections;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
 
-public class MaskBlood : Masks
+[CreateAssetMenu(fileName = "New Mask Blood", menuName = "Item/Create New Mask Blood")]
+public class MaskBlood : InventoryItem
 {
     public float duration;
 
-    public override void ApplyAffects()
+    public void ExecuteEffect(PlayerStats playerstats, avatarMovement playermovement)
     {
-        base.ApplyAffects();
-        Debug.Log("Bleh");
-        
+        playerstats.StartCoroutine(DamageOverTimeCoroutine(playerstats, 20, 20));
     }
 
-    public void DamageOverTime(int damageAmount, int damageTime)
-    {
-        StartCoroutine(DamageOverTimeCoroutine(damageAmount, damageTime));
-    }
-
-    IEnumerator DamageOverTimeCoroutine(float damageAmount, float damageTime)
+    IEnumerator DamageOverTimeCoroutine(PlayerStats stats, float damageAmount, float damageTime)
     {
         float amountDamaged = 0;
         float damagePerLoop = damageAmount / duration;
         while (amountDamaged < damageAmount)
         {
-            PlayerStats stats = GetComponent<PlayerStats>();
             stats.currentHealth -= damagePerLoop;
             Debug.Log(stats.currentHealth.ToString());
             amountDamaged += damagePerLoop;
