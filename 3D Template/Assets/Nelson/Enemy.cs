@@ -95,6 +95,7 @@ public class Enemy : MonoBehaviour
             attacking -= 1;
         }
 
+        anim.SetBool("attacking",attacking>0);
         sc.enabled = attacking > 0;
 
         if (Vector3.Distance(transform.position,player.position)>=idledist&&health>0)
@@ -127,6 +128,7 @@ public class Enemy : MonoBehaviour
                 ishit = 50;
                 if (health<=0)
                 {
+                    attacking = 0;
                     mode = "death";
                     Invoke("SelfDestruct", 7f);
                 }
