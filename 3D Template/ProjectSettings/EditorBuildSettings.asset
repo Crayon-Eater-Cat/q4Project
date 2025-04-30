@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Delsin/Scenes/Menus/Tutorial.unity
     guid: cd758fd23579472478e14b64ae0cb3fb
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Test Scene.unity
+    guid: c41061d23f92a5643bf0fef433434cca
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 44256e8a2e7bc674c9cceab2f043a30c,
       type: 3}

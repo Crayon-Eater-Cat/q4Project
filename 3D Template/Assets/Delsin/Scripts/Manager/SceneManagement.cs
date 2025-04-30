@@ -24,6 +24,8 @@ public class SceneManagement : MonoBehaviour
 
         SceneTransition.gameObject.SetActive(true);
 
+        UnityEngine.EventSystems.EventSystem.current.enabled = false;
+
         yield return new WaitForSeconds(0.5f);
 
         SceneTransition.SetTrigger("Finished");
