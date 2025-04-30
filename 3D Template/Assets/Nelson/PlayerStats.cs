@@ -6,8 +6,8 @@ public class PlayerStats : MonoBehaviour
 {
     public float maxHealth;
     private ArmorSystem armorSystem;
-    
-    public float currentHealth;
+
+    float currentHealth;
     public TextMeshProUGUI healthAmountText;
     public HealthBar healthBar;
     private void Start()
@@ -50,6 +50,10 @@ public class PlayerStats : MonoBehaviour
     public void DecreaseHealth(float amount)
     {
         currentHealth -= amount;
+    }
+    public float GetHealth()
+    {
+        return currentHealth;
     }
     private void Die()
     {
