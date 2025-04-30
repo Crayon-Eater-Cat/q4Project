@@ -128,15 +128,12 @@ public class Enemy : MonoBehaviour
                 ishit = 50;
                 if (health<=0)
                 {
+                    anim.SetBool("death", true);
                     attacking = 0;
                     mode = "death";
                     Invoke("SelfDestruct", 7f);
                 }
             }
-            else
-            {
-                anim.SetBool("death",true);
-            }  
         }
     }
     public void SelfDestruct()
