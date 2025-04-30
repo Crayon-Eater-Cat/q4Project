@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
 
     float attacking;
 
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +35,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindWithTag ("Player").transform;
         rayorigin = transform.GetChild(2);
         anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -46,7 +49,7 @@ public class Enemy : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position,rayorigin.forward,out hit,detectiondist))
         {
-            if (hit.collider.gameObject.tag=="Player"&&health>0)
+            if (hit.collider.gameObject.tag=="Player"&&mode!="death")
             {
                 if (Vector3.Distance(transform.position,player.position)>stoppingdist)
                 {
