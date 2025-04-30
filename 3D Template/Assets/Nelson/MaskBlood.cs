@@ -18,8 +18,9 @@ public class MaskBlood : InventoryItem
         float damagePerLoop = damageAmount / duration;
         while (amountDamaged < damageAmount)
         {
-            stats.currentHealth -= damagePerLoop;
-            Debug.Log(stats.currentHealth.ToString());
+            //Current health is a private variable as public variables cannot be modified except in the inspector. Use these functions alternatively.
+            stats.DecreaseHealth(damagePerLoop);
+            Debug.Log(stats.GetHealth().ToString());
             amountDamaged += damagePerLoop;
             yield return new WaitForSeconds(1f);
         }
