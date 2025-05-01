@@ -10,6 +10,7 @@ public class MaskBlood : InventoryItem
     public void ExecuteEffect(PlayerStats playerstats, avatarMovement playermovement)
     {
         playerstats.StartCoroutine(DamageOverTimeCoroutine(playerstats, 20, 20));
+        //playermovement;
     }
 
     IEnumerator DamageOverTimeCoroutine(PlayerStats stats, float damageAmount, float damageTime)
