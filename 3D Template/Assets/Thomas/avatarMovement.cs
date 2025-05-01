@@ -133,7 +133,7 @@ public class avatarMovement : MonoBehaviour
         }
 
         //attackbox:
-        transform.GetChild(3).GetComponent<BoxCollider>().enabled=attack;
+        transform.GetChild(3).GetComponent<SphereCollider>().enabled=attack;
 
         //checking if you can jump:
         canjump = Physics.BoxCast(transform.position, new Vector3(0, 1, 0), -transform.up, Quaternion.Euler(Vector3.zero), 1);
