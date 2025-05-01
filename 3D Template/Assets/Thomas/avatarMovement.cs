@@ -142,7 +142,7 @@ public class avatarMovement : MonoBehaviour
         if (Input.GetKeyDown(attackkey)&&!attack&&canjump&&!dead)
         {
             attack = true;
-            timer = 30;
+            timer = 5;
         }
         if (attack)
         {
