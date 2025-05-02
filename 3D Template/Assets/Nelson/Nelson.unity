@@ -1136,7 +1136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1108503589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2727,6 +2727,11 @@ PrefabInstance:
       propertyPath: hb
       value: 
       objectReference: {fileID: 1723714897}
+    - target: {fileID: 3888279134180178994, guid: 6d1d90fba01ed1b4fb3e94517bb16bd1,
+        type: 3}
+      propertyPath: m_TagString
+      value: attack
+      objectReference: {fileID: 0}
     - target: {fileID: 4045785206351423567, guid: 6d1d90fba01ed1b4fb3e94517bb16bd1,
         type: 3}
       propertyPath: healthSlider
