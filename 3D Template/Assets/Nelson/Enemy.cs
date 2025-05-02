@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
             if (ishit==0&&health>0)
             {
                 anim.SetTrigger("attack");
-                attacktimer = 10;
+                attacktimer = 20;
                 attacking = 5;
             }
         }
@@ -124,7 +124,7 @@ public class Enemy : MonoBehaviour
             {
                 anim.SetBool("hit", true);
                 health -= 5;
-                ishit = 50;
+                ishit = 20;
                 Debug.Log(health);
                 if (health<=0)
                 {
