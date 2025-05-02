@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
     float attacking;
 
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -82,7 +81,7 @@ public class Enemy : MonoBehaviour
             {
                 anim.SetTrigger("attack");
                 attacktimer = 10;
-                attacking = 2;
+                attacking = 5;
             }
         }
         if (attacktimer>0 )
@@ -126,6 +125,7 @@ public class Enemy : MonoBehaviour
                 anim.SetBool("hit", true);
                 health -= 5;
                 ishit = 50;
+                Debug.Log(health);
                 if (health<=0)
                 {
                     anim.SetBool("death", true);
