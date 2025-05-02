@@ -124,7 +124,7 @@ public class Enemy : MonoBehaviour
             {
                 anim.SetBool("hit", true);
                 health -= 5;
-                ishit = 50;
+                ishit = 20;
                 Debug.Log(health);
                 if (health<=0)
                 {
