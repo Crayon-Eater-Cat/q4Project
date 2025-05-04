@@ -646,6 +646,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3936825953921529495, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: aa1d6ed8d1d56d74b9a9e166f6e24323,
+        type: 2}
+    - target: {fileID: 1873711818545532907, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: aa1d6ed8d1d56d74b9a9e166f6e24323,
+        type: 2}
     - target: {fileID: 3069114263202336410, guid: 9086f254fd8353342bc9f165a755d08e,
         type: 3}
       propertyPath: m_Name
@@ -3763,6 +3775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Oni
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392260917359718987, guid: 34652b05cf13035418d063c4293346ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8501,6 +8518,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1247684389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1262570365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -3936825953921529495, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a6a84f5bc0b1c649abdb8feb11a736e,
+        type: 2}
+    - target: {fileID: 1873711818545532907, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a6a84f5bc0b1c649abdb8feb11a736e,
+        type: 2}
+    - target: {fileID: 3069114263202336410, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_Name
+      value: MaskBlood (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 178.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 224.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.67342675
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.73925406
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 95.336
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195025070596848925, guid: 9086f254fd8353342bc9f165a755d08e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9086f254fd8353342bc9f165a755d08e, type: 3}
 --- !u!1001 &1303566343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14278,14 +14375,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d96b68e916bda40ba802dec83f8446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdown: 10
+  countdown: 35
   spawnPoint: {fileID: 1191626635}
   waves:
   - enemies:
     - {fileID: 3399263797861338878, guid: 3ef24f7792b691c46a7a127eb92d5045, type: 3}
     - {fileID: 608283940006707088, guid: 34652b05cf13035418d063c4293346ac, type: 3}
-    timeToNextEnemy: 2
-    timeToNextWave: 2
+    timeToNextEnemy: 5
+    timeToNextWave: 10
     enemiesLeft: 0
 --- !u!4 &2076026301
 Transform:
@@ -14689,3 +14786,4 @@ SceneRoots:
   - {fileID: 126433887}
   - {fileID: 461540345}
   - {fileID: 2076026301}
+  - {fileID: 1262570365}

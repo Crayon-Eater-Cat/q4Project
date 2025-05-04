@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e148ff845f9732d4fbba00622cccf7c1, type: 3}
-  m_Name: Mask Blood
+  m_Script: {fileID: 11500000, guid: 8bddbd03c0b9a364982e1c8f1a9a8897, type: 3}
+  m_Name: Mask Swiftness
   m_EditorClassIdentifier: 
   id: 0
   itemName: 
@@ -20,7 +20,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000}
-        m_TargetAssemblyTypeName: MaskBlood, Assembly-CSharp
+        m_TargetAssemblyTypeName: MaskSwiftness, Assembly-CSharp
         m_MethodName: ExecuteEffect
         m_Mode: 0
         m_Arguments:
@@ -31,4 +31,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  duration: 2
