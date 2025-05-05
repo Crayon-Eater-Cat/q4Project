@@ -351,7 +351,8 @@ MonoBehaviour:
   setspeed: 5
   camspeed: 1
   cam: {fileID: 3937355138386181111}
-  mousecontrolled: 0
+  canjump: 0
+  mousecontrolled: 1
   invincibilityDuration: 0
   attackkey: 122
   hb: {fileID: 0}
@@ -442,5 +443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   healthAmountText: {fileID: 0}
   healthBar: {fileID: 0}
