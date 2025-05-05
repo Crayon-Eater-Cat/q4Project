@@ -187,7 +187,10 @@ public class avatarMovement : MonoBehaviour
             invincible = false;
         }
     }
-
+    public string GetMode()
+    {
+        return mode;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag==enemyattacktag&&!invincible)
