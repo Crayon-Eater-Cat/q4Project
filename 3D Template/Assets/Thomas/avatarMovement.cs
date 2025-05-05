@@ -12,7 +12,7 @@ public class avatarMovement : MonoBehaviour
     Animator anim;
     public Transform cam;
     Transform campivot;
-    bool canjump;
+    public bool canjump;
     public bool mousecontrolled;
     public float invincibilityDuration;
 
