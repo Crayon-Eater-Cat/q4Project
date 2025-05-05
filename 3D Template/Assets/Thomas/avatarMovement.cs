@@ -3,6 +3,8 @@ using UnityEngine;
 public class avatarMovement : MonoBehaviour
 {
     Rigidbody rb;
+    public float mildinjuryseverity;
+    public float criticalinjuryseverity;
     public float jumpforce;
     public float setspeed;
     float speed;
@@ -193,11 +195,11 @@ public class avatarMovement : MonoBehaviour
             invincible = true;
             if (mode=="standard")
             {
-                ps.DecreaseHealth(3);
+                ps.DecreaseHealth(mildinjuryseverity);
             }
             else if (mode=="swift")
             {
-                ps.DecreaseHealth(7);
+                ps.DecreaseHealth(criticalinjuryseverity);
             }
                 
             invintimer = invincibilityDuration;
