@@ -7,6 +7,9 @@ public class MaskSwiftness : InventoryItem
 {
     public void ExecuteEffect(PlayerStats playerstats, avatarMovement playermovement)
     {
+        playermovement.setspeed = 20f;
 
-    }
+        playerstats.currentHealth = 50f;
+        playerstats.maxHealth = 50f;
+    }   
 }

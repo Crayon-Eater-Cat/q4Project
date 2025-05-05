@@ -255,7 +255,7 @@ MonoBehaviour:
   player: {fileID: 0}
   idledist: 20
   stoppingdist: 5
-  detectiondist: 10
+  detectiondist: 1000
   initialhealth: 50
   sc: {fileID: 1923886004233281483}
 --- !u!195 &8800979999748354565

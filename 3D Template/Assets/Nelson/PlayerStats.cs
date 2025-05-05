@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth;
     private ArmorSystem armorSystem;
 
-    float currentHealth;
+    public float currentHealth;
     public TextMeshProUGUI healthAmountText;
     public HealthBar healthBar;
     private void Start()
