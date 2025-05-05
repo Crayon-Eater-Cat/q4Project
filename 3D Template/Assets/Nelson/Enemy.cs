@@ -4,6 +4,8 @@ using UnityEngine.Rendering;
 
 public class Enemy : MonoBehaviour
 {
+    public float mildinjuryseverity;
+    public float criticalinjuryseverity;
     public float damage;
     public NavMeshAgent enemy;
     public Transform player;
@@ -112,18 +114,21 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            other.GetComponent<PlayerStats>().TakeDamge(damage);
-        }
         if (other.CompareTag("attack"))
         {
-
             Debug.Log("struck");
             if (health>=0)
             {
                 anim.SetBool("hit", true);
-                health -= 5;
+                if (player.gameObject.GetComponent<avatarMovement>().GetMode()=="strong")
+                {
+                    health -= criticalinjuryseverity;
+                }
+                else
+                {
+                    health -= mildinjuryseverity;
+                }
+                
                 ishit = 20;
                 Debug.Log(health);
                 if (health<=0)
