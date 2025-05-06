@@ -50,6 +50,7 @@ public class PlayerStats : MonoBehaviour
     public void DecreaseHealth(float amount)
     {
         currentHealth -= amount;
+        healthBar.SetSlider(currentHealth);
     }
     public float GetHealth()
     {

@@ -7,6 +7,6 @@ public class MaskPenalty : InventoryItem
 {
     public void ExecuteEffect(PlayerStats playerstats, avatarMovement playermovement)
     {
-
+        playermovement.mildinjuryseverity = 20f;
     }
 }

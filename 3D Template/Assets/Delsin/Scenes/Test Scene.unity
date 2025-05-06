@@ -721,10 +721,20 @@ PrefabInstance:
       propertyPath: SceneTransition
       value: 
       objectReference: {fileID: 459070763}
+    - target: {fileID: 2404480053825135553, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4291897485017711216, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
         type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291897485017711216, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5558810398489816120, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
         type: 3}
@@ -851,6 +861,36 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1032746369}
+    - target: {fileID: 9127668963432235654, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127668963432235654, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127668963432235654, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127668963432235654, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127668963432235654, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127668963432235654, guid: 12d94c1ddcc8c874fbea4a913b175e1f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
