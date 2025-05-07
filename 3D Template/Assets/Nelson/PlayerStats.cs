@@ -60,5 +60,7 @@ public class PlayerStats : MonoBehaviour
     {
         Debug.Log("You are Dead");
         gameObject.SetActive(false);
+
+        GameplayController.instance.RestartGame();
     }
 }
