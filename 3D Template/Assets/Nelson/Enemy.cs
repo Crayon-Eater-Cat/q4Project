@@ -144,5 +144,6 @@ public class Enemy : MonoBehaviour
     public void SelfDestruct()
     {
         Destroy(gameObject);
+        GameplayController.instance.EnemyKilled();
     }
 }
