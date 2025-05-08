@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Delsin/Scenes/Credits/Credits.unity
     guid: d7d1b97ef1aa8634891d78575e8d841e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Delsin/Scenes/Credits/Abigail.unity
     guid: 8592a2700fb083d4f9bd56aad0bd6f8b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Delsin/Scenes/Credits/Delsin.unity
     guid: 017ef627cdd34cf4f8a7db7ae2f988b3
   - enabled: 1
@@ -35,15 +35,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Delsin/Scenes/Menus/Tutorial.unity
     guid: cd758fd23579472478e14b64ae0cb3fb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Delsin/Scenes/Test Scene.unity
     guid: c41061d23f92a5643bf0fef433434cca
-  - enabled: 1
+  - enabled: 0
     path: Assets/Nelson/Nelson.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Thomas/Scenes/Level.unity
     guid: 99162f22e20830f4b8daf03dcfdd195c
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Menus/DeathMenu.unity
+    guid: f7401973d4d3a8f4cb62b6417b0040d8
+  - enabled: 1
+    path: Assets/Delsin/Scenes/Menus/WinMenu.unity
+    guid: 0699a7c63c98c3f4d849baa1e3a74c54
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 44256e8a2e7bc674c9cceab2f043a30c,
       type: 3}

@@ -8,4 +8,5 @@ public class InventoryItem : ScriptableObject
     public int value;
     public Sprite icon;
     public UnityEvent<PlayerStats, avatarMovement> effect;
+    public UnityEvent<PlayerStats, avatarMovement> undoeffect;
 }

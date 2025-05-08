@@ -13,6 +13,11 @@ public class MaskBlood : InventoryItem
         
     }
 
+    public void Undo(PlayerStats playerstats, avatarMovement playermovement)
+    {
+
+    }
+
     IEnumerator DamageOverTimeCoroutine(PlayerStats stats, float damageAmount, float damageTime)
     {
         float amountDamaged = 0;

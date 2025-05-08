@@ -9,6 +9,11 @@ public class Masks : MonoBehaviour
         Debug.Log("Eto");
     }
 
+    public virtual void UnapplyAffects()
+    {
+
+    }
+
     private void Start()
     {
         ApplyAffects();

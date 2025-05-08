@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
 
@@ -11,5 +12,10 @@ public class MaskSwiftness : InventoryItem
 
         playerstats.currentHealth = 50f;
         playerstats.maxHealth = 50f;
-    }   
+    }
+
+    public void Undo(PlayerStats playerstats, avatarMovement playermovement)
+    {
+        
+    }
 }

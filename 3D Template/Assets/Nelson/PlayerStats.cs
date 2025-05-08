@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerStats : MonoBehaviour
@@ -45,6 +46,7 @@ public class PlayerStats : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            SceneManager.LoadScene("DeathMenu");
         }
     }
     public void DecreaseHealth(float amount)
